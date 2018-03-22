@@ -1,0 +1,12 @@
+{
+    "default": [
+        "build"
+    ],
+
+    "build": [
+        "sass",
+        "postcss",
+        "cssmin",
+        "notify:build"
+    ]
+}
