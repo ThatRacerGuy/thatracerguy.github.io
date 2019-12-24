@@ -5,12 +5,32 @@
 
 html {
 	background: #f0f0f0 url("/images/bk-content.jpg") repeat 0 0;
+	color: #000;
 }
 
 body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.5;
+	margin: 0;
 	max-width: 1060px;
-	margin: 0 auto;
-	padding: 2em 20px;
+	padding: 1em;
+
+	@include breakpoint('md') {
+		margin: 0 auto;
+		padding: 2em 20px;
+	}
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0 0 0.75em;
 }
 
 h1,
@@ -19,26 +39,47 @@ h3 {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
+h4,
+h5,
+h6 {
+	font-size: 1.25em;
+}
+
 h1 {
-	margin-left: $lw;
+	font-size: 2em;
 	margin-bottom: 0.5em;
+
+	@include breakpoint('md') {
+		margin-left: $lw;
+	}
+
 }
 
 h2 {
-	float: left;
-	width: $lw - 5%;
-	margin-right: 5%;
+	font-size: 1.75em;
 	margin-bottom: 0;
 	padding-top: 0.5714em;
+
+	@include breakpoint('md') {
+		float: left;
+		margin-right: 5%;
+		width: $lw - 5%;
+	}
+
 }
 
 h2 + section {
-	padding-left: $lw;
 	border-top: $border;
 	padding-top: 1em;
+
+	@include breakpoint('md') {
+		padding-left: $lw;
+	}
+
 }
 
 h3 {
+	font-size: 1.5em;
 	margin-bottom: 0.5em;
 
 	span {
@@ -55,7 +96,7 @@ h4 {
 p,
 ul,
 ol {
-	margin: 0 0 1em 0;
+	margin: 0 0 1em;
 	color: $bodycolor;
 }
 
@@ -95,60 +136,34 @@ a {
 
 }
 
-h1 + img {
-	width: 300px;
-	margin-left: 1em;
-	margin-bottom: 0.5em;
-	height: auto;
-	max-width: 100%;
-	background: #fff;
-	border: 1px solid #bbb;
-	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-	padding: 12px 12px 48px;
-	transform: rotate(5deg);
-	-webkit-transform: rotate(5deg);
-	-ms-transform: rotate(5deg);
-	float: right;
-
-	&:hover {
-		transform: rotate(-5deg);
-		-webkit-transform: rotate(-5deg);
-		-ms-transform: rotate(-5deg);
-		box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.4);
-	}
-
+.certifications p {
+	font-size: 1.5em;
 }
 
+h1 + img {
+	background: #fff;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+	margin-bottom: 1em;
+	max-width: 50%;
+	width: 300px;
 
-
-
-
-@media(max-width: 600px) {
-
-	body {
-		max-width: none;
-		margin: 0;
-		padding: 1em;
+	@include breakpoint('md') {
+		border: 1px solid #bbb;
+		float: right;
+		margin-bottom: 0.5em;
+		margin-left: 1em;
+		max-width: 100%;
+		padding: 12px 12px 48px;
+		transform: rotate(5deg);
 	}
 
-	h1 {
-		margin-left: 0;
-	}
+	&:hover {
+		box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.4);
 
-	h2 {
-		float: none;
-		width: auto;
-		margin-right: 0;
-	}
+		@include breakpoint('md') {
+			transform: rotate(-5deg);
+		}
 
-	h2 + section {
-		padding-left: 0;
-	}
-
-	h1 + img {
-		max-width: 40%;
-		padding: 0;
-		border: 0;
 	}
 
 }

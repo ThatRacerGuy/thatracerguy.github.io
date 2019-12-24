@@ -1,9 +1,64 @@
 /* Variables */
 
+// Left column width (desktop)
 $lw: 25%;
 
+// Colors
 $bordercolor: #888;
 $bodycolor: #222;
 $linkcolor: #220;
 
+// Border style
 $border: 1px dotted $bordercolor;
+
+// Extra small screen / phone
+$screen-xs:         480px !default;
+$screen-xs-min:     $screen-xs !default;
+$screen-phone:      $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:         768px !default;
+$screen-sm-min:     $screen-sm !default;
+$screen-tablet:     $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:         992px !default;
+$screen-md-min:     $screen-md !default;
+$screen-desktop:    $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:         1200px !default;
+$screen-lg-min:     $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:    ($screen-xs-min - 1) !default;
+$screen-xs-max:     ($screen-sm-min - 1) !default;
+$screen-sm-max:     ($screen-md-min - 1) !default;
+$screen-md-max:     ($screen-lg-min - 1) !default;
+
+@mixin breakpoint($class) {
+  @if $class == xxs {
+    @media (max-width: $screen-xxs-max) {
+      @content;
+    }
+  } @else if $class == xs {
+    @media (max-width: $screen-xs-max) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: $screen-lg-min) {
+      @content;
+    }
+  } @else {
+    @warn 'Breakpoint mixin supports: xxs, xs, sm, md, and lg';
+  }
+}
