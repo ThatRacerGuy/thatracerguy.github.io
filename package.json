@@ -1,17 +1,40 @@
 {
   "name": "thatracerguy.github.io",
   "version": "1.0.0",
-  "author": "John Jennings <john@johncjennings.com>",
+  "description": "The Resume of John C. Jennings",
+  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "watch": "gulp watch",
+    "build": "gulp build:prod && npm run files",
+    "tasks": "gulp --tasks",
+    "postinstall": "gulp build:prod"
+  },
   "devDependencies": {
-    "autoprefixer": "6.5.2",
-    "grunt": "1.0.1",
-    "grunt-contrib-cssmin": "1.0.2",
-    "grunt-contrib-uglify": "2.0.0",
-    "grunt-contrib-watch": "1.0.0",
-    "grunt-notify": "0.4.5",
-    "grunt-postcss": "0.8.0",
-    "grunt-sass": "1.2.1",
-    "load-grunt-config": "0.19.2",
-    "postcss-banner": "3.0.0"
-  }
+    "@babel/core": "^7.7.4",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^6.7.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1"
+  },
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThatRacerGuy/thatracerguy.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/ThatRacerGuy/thatracerguy/issues"
+  },
+  "homepage": "https://github.com/ThatRacerGuy/thatracerguy#readme"
 }
