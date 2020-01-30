@@ -118,6 +118,12 @@ a {
 
 }
 
+.headshot {
+	border-radius: 50%;
+	max-width: 50%;
+	width: 200px;
+}
+
 .list-inline {
 	
 	li {
@@ -143,23 +149,22 @@ a {
 
 }
 
-.jobs ul,
-.projects ul {
-	margin-left: 3rem;
+.list-disc {
 	list-style-type: disc;
+	margin-left: 3rem;
 
 	li {
-		margin: 0.25rem 0;
+		margin: 0 0 0.5rem;
+	}
+	
+	ul {
+		list-style-type: disc;
+		margin-left: 3rem;
+		margin-top: 0.5rem;
 	}
 
 }
 
 .certifications p {
-	font-size: 1.75rem;
-}
-
-.headshot {
-	border-radius: 50%;
-	max-width: 50%;
-	width: 200px;
+	font-size: 1.5rem;
 }
