@@ -4,23 +4,15 @@
 /* Presentation Style */
 
 html {
-	background: #f0f0f0 url("/images/bk-content.jpg") repeat 0 0;
-	color: #000;
+	background: #fff;
+	color: $bodycolor;
+	font-size: 10px;
 }
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
+	font-size: 1.4rem;
 	line-height: 1.5;
-	margin: 0;
-	max-width: 1060px;
-	padding: 1em;
-
-	@include breakpoint('md') {
-		margin: 0 auto;
-		padding: 2em 20px;
-	}
-
 }
 
 h1,
@@ -30,7 +22,7 @@ h4,
 h5,
 h6 {
 	font-weight: normal;
-	margin: 0 0 0.75em;
+	margin: 0 0 0.75rem;
 }
 
 h1,
@@ -42,45 +34,26 @@ h3 {
 h4,
 h5,
 h6 {
-	font-size: 1.25em;
+	font-size: 1.4rem;
 }
 
 h1 {
-	font-size: 2em;
-	margin-bottom: 0.5em;
-
-	@include breakpoint('md') {
-		margin-left: $lw;
-	}
-
+	font-size: 2.5rem;
 }
 
 h2 {
-	font-size: 1.75em;
-	margin-bottom: 0;
-	padding-top: 0.5714em;
-
-	@include breakpoint('md') {
-		float: left;
-		margin-right: 5%;
-		width: $lw - 5%;
-	}
-
-}
-
-h2 + section {
-	border-top: $border;
-	padding-top: 1em;
-
-	@include breakpoint('md') {
-		padding-left: $lw;
+	font-size: 2rem;
+	
+	&.section-title {
+		margin-bottom: 0;
+		text-transform: uppercase;
 	}
 
 }
 
 h3 {
-	font-size: 1.5em;
-	margin-bottom: 0.5em;
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
 
 	span {
 		font-size: 75%;
@@ -90,80 +63,103 @@ h3 {
 }
 
 h4 {
-	margin-bottom: 0.6em;
+	margin-bottom: 0.5rem;
 }
 
 p,
 ul,
 ol {
-	margin: 0 0 1em;
-	color: $bodycolor;
+	margin: 0 0 1rem;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+
 }
 
 a {
 	color: $linkcolor;
 }
 
-.skills li {
-	display: inline;
-
-	&:after {
-		content: ', ';
+.section {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	
+	@include breakpoint('md') {
+		flex-direction: row;
+	}
+	
+	&:nth-child(2n) {
+		background: rgba(0,0,0,0.025);
 	}
 
-	&:last-child {
+}
 
-		&:before {
-			content: ' and ';
-		}
+.section-title {
+	padding: $topSpacingMobile $sideSpacingMobile 0;
+	
+	@include breakpoint('md') {
+		background: rgba(0,0,0,0.025);
+		padding: $topSpacing $sideSpacing;
+		text-align: right;
+		width: $lw;
+	}
 
+}
+
+.section-content {
+	padding: $topSpacingMobile $sideSpacingMobile;
+	
+	@include breakpoint('md') {
+		padding: $topSpacing $sideSpacing;
+		width: 100% - $lw;
+	}
+
+}
+
+.list-inline {
+	
+	li {
+		display: inline;
+	
 		&:after {
-			content: '';
+			content: ', ';
 		}
-
+	
+		&:last-child {
+	
+			&:before {
+				content: ' and ';
+			}
+	
+			&:after {
+				content: '';
+			}
+	
+		}
+	
 	}
 
 }
 
 .jobs ul,
 .projects ul {
-	margin-left: 3em;
+	margin-left: 3rem;
 	list-style-type: disc;
 
 	li {
-		margin: 0.25em 0;
+		margin: 0.25rem 0;
 	}
 
 }
 
 .certifications p {
-	font-size: 1.5em;
+	font-size: 1.75rem;
 }
 
-h1 + img {
-	background: #fff;
-	box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-	margin-bottom: 1em;
+.headshot {
+	border-radius: 50%;
 	max-width: 50%;
-	width: 300px;
-
-	@include breakpoint('md') {
-		border: 1px solid #bbb;
-		float: right;
-		margin-bottom: 0.5em;
-		margin-left: 1em;
-		max-width: 100%;
-		padding: 12px 12px 48px;
-		transform: rotate(5deg);
-	}
-
-	&:hover {
-		box-shadow: 1px 4px 12px rgba(0, 0, 0, 0.4);
-
-		@include breakpoint('md') {
-			transform: rotate(-5deg);
-		}
-
-	}
-
+	width: 200px;
 }

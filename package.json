@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "watch": "gulp watch",
-    "build": "gulp build:prod && npm run files",
+    "build": "gulp build:prod",
     "tasks": "gulp --tasks",
     "postinstall": "gulp build:prod"
   },
