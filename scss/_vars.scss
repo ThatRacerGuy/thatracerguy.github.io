@@ -1,5 +1,11 @@
 /* Variables */
 
+@mixin print() {
+  @media print {
+    @content;
+  }
+}
+
 // Extra small screen / phone
 $screen-xs:         480px !default;
 $screen-xs-min:     $screen-xs !default;
@@ -54,11 +60,70 @@ $screen-md-max:     ($screen-lg-min - 1) !default;
 
 // Size
 $lw: 25%;
+$lwPrint: 20%;
 $topSpacing: 3rem;
 $sideSpacing: 3rem;
 $topSpacingMobile: 2rem;
 $sideSpacingMobile: 2rem;
+$topSpacingPrint: 1rem;
+$sideSpacingPrint: 1rem;
 
 // Colors
 $bodycolor: #333;
 $linkcolor: #333;
+
+// Font sizes
+@mixin fontH1() {
+  font-size: 2.5rem;
+  line-height: 1.2; // 3rem
+
+  @include print() {
+    font-size: (4/3) * 100%;
+    line-height: 1.25;
+  }
+
+}
+
+@mixin fontH2() {
+  font-size: 2rem;
+  line-height: 1; // 2rem
+
+  @include print() {
+    font-size: 1.25 * 100%;
+    line-height: 1.25;
+  }
+
+}
+
+@mixin fontH3() {
+  font-size: 1.75rem;
+  line-height: (8/7); // 2rem
+
+  @include print() {
+    font-size: (7/6) * 100%;
+    line-height: 1.25;
+  }
+
+}
+
+@mixin fontH4() {
+  font-size: 1.5rem;
+  line-height: (4/3); // 2rem
+
+  @include print() {
+    font-size: 1.125 * 100%;
+    line-height: 1.25;
+  }
+
+}
+
+@mixin fontStandard() {
+  font-size: 1.4rem;
+  line-height: (10/7); // 2rem
+
+  @include print() {
+    font-size: 8.5pt;
+		line-height: 1.25;
+  }
+
+}
