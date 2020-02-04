@@ -36,10 +36,32 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
+	
+	@include print() {
+		text-decoration: none;
+	}
 
 }
 
 /* Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font: inherit;
+}
+
+p {
+	margin: 0 0 2rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+}
 
 sup,
 sub {
@@ -57,15 +79,20 @@ sub {
 /* Lists */
 
 ol,
-ul,
+ul {
+	list-style: none outside none;
+	margin: 0 0 2rem;
+	padding: 0;
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+}
+
 li {
 	margin: 0;
 	padding: 0;
-}
-
-ol,
-ul {
-	list-style: none outside none;
 }
 
 /* Media */

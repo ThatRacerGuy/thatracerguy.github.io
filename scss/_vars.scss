@@ -73,11 +73,26 @@ $bodycolor: #333;
 $linkcolor: #333;
 
 // Font sizes
+@mixin fontStandard() {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  line-height: (10/7); // 2rem
+
+  @include print() {
+    font-size: 8.5pt;
+		line-height: 1.25;
+  }
+
+}
+
 @mixin fontH1() {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
+  font-weight: normal;
   line-height: 1.2; // 3rem
 
   @include print() {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: (4/3) * 100%;
     line-height: 1.25;
   }
@@ -85,10 +100,13 @@ $linkcolor: #333;
 }
 
 @mixin fontH2() {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 2rem;
+  font-weight: normal;
   line-height: 1; // 2rem
 
   @include print() {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.25 * 100%;
     line-height: 1.25;
   }
@@ -97,6 +115,7 @@ $linkcolor: #333;
 
 @mixin fontH3() {
   font-size: 1.75rem;
+  font-weight: normal;
   line-height: (8/7); // 2rem
 
   @include print() {
@@ -108,6 +127,7 @@ $linkcolor: #333;
 
 @mixin fontH4() {
   font-size: 1.5rem;
+  font-weight: normal;
   line-height: (4/3); // 2rem
 
   @include print() {
@@ -117,13 +137,10 @@ $linkcolor: #333;
 
 }
 
-@mixin fontStandard() {
-  font-size: 1.4rem;
-  line-height: (10/7); // 2rem
+@mixin fontH5() {
+  font-weight: normal;
+}
 
-  @include print() {
-    font-size: 8.5pt;
-		line-height: 1.25;
-  }
-
+@mixin fontH6() {
+  font-weight: normal;
 }

@@ -16,7 +16,6 @@ html {
 
 body {
 	@include fontStandard();
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
@@ -25,18 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: normal;
 	margin: 0 0 1rem;
-}
-
-h1,
-h2 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-
-	@include print() {
-		font-family: Arial, Helvetica, sans-serif;
-	}
-
 }
 
 h1 {
@@ -67,15 +55,12 @@ h4 {
 	@include fontH4();
 }
 
-p,
-ul,
-ol {
-	margin: 0 0 2rem;
+h5 {
+	@include fontH5();
+}
 
-	&:last-child {
-		margin-bottom: 0;
-	}
-
+h6 {
+	@include fontH6();
 }
 
 a {
@@ -83,7 +68,6 @@ a {
 
 	@include print() {
 		color: inherit;
-		text-transform: none;
 	}
 
 }
@@ -163,8 +147,8 @@ a {
 
 .headshot {
 	border-radius: 50%;
-	max-width: 50%;
-	width: 200px;
+	max-width: 200px;
+	width: 50%;
 
 	@include print() {
 		display: none;
