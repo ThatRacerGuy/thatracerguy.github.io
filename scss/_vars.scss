@@ -76,7 +76,7 @@ $linkcolor: #333;
 @mixin fontStandard() {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
-  line-height: (10/7); // 2rem
+  line-height: (4/3);
 
   @include print() {
     font-size: 8.5pt;
@@ -89,12 +89,10 @@ $linkcolor: #333;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 2.5rem;
   font-weight: normal;
-  line-height: 1.2; // 3rem
 
   @include print() {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: (4/3) * 100%;
-    line-height: 1.25;
+    font-size: 12pt;
   }
 
 }
@@ -103,12 +101,10 @@ $linkcolor: #333;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: normal;
-  line-height: 1; // 2rem
 
   @include print() {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.25 * 100%;
-    line-height: 1.25;
+    font-size: 10pt;
   }
 
 }
@@ -116,11 +112,9 @@ $linkcolor: #333;
 @mixin fontH3() {
   font-size: 1.75rem;
   font-weight: normal;
-  line-height: (8/7); // 2rem
 
   @include print() {
-    font-size: (7/6) * 100%;
-    line-height: 1.25;
+    font-size: 10pt;
   }
 
 }
@@ -128,11 +122,9 @@ $linkcolor: #333;
 @mixin fontH4() {
   font-size: 1.5rem;
   font-weight: normal;
-  line-height: (4/3); // 2rem
 
   @include print() {
-    font-size: 1.125 * 100%;
-    line-height: 1.25;
+    font-size: 9pt;
   }
 
 }

@@ -36,7 +36,7 @@ a {
 	&:hover {
 		text-decoration: none;
 	}
-	
+
 	@include print() {
 		text-decoration: none;
 	}
@@ -52,10 +52,11 @@ h4,
 h5,
 h6 {
 	font: inherit;
+	margin: 0 0 0.75rem;
 }
 
 p {
-	margin: 0 0 2rem;
+	margin: 0 0 1.5rem;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -81,9 +82,9 @@ sub {
 ol,
 ul {
 	list-style: none outside none;
-	margin: 0 0 2rem;
+	margin: 0 0 1.5rem;
 	padding: 0;
-	
+
 	&:last-child {
 		margin-bottom: 0;
 	}
