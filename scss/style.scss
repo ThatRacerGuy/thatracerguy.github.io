@@ -206,3 +206,12 @@ a {
 	}
 
 }
+
+.certifications {
+
+	li {
+		@include fontH3();
+		margin-bottom: 1rem;
+	}
+
+}
