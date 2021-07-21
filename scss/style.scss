@@ -174,7 +174,16 @@ a {
 
 .list-disc {
 	list-style-type: disc;
+	margin-bottom: 3rem;
 	margin-left: 3rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include print() {
+		margin-bottom: 1.5rem;
+	}
 
 	li {
 		margin: 0 0 1rem;
