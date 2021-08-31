@@ -207,6 +207,31 @@ a {
 
 }
 
+.skills {
+
+	ul {
+
+		@include print() {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 0;
+		}
+
+		li {
+
+			@include print() {
+				left: 3rem;
+				padding-right: 3rem;
+				position: relative;
+				width: 25%;
+			}
+
+		}
+
+	}
+
+}
+
 .certifications {
 
 	li {
