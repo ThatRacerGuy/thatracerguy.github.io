@@ -1,5 +1,5 @@
 html, body {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 body {
@@ -37,7 +37,11 @@ section.intro {
   padding: 0;
 }
 
-.box {
+.boxes-2 .box {
+  width: calc(50% - 0.5rem);
+}
+
+.boxes-4 .box {
   width: calc(25% - 0.75rem);
 }
 
@@ -51,4 +55,8 @@ section.intro {
 
 .inline-list li:after {
   top: 0;
+}
+
+footer {
+  display: none;
 }
