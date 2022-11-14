@@ -18,7 +18,7 @@ body {
   padding: 0 20px;
 }
 
-h1, h2, h3, p, ul, ol {
+h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin-top: 0;
 }
 
@@ -40,14 +40,13 @@ h3 {
   font-size: 1.25rem;
 }
 
-h1, h2, h3 {
-  font-family: 'Trebuchet MS', sans-serif;
-  font-weight: normal;
-  margin-bottom: 1rem;
-}
-
 h4, h5, h6 {
   font-size: 1.125rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: normal;
   margin-bottom: 1rem;
 }
 
@@ -105,6 +104,10 @@ section:nth-child(2n):before {
 }
 
 section h2 {
+  text-align: center;
+}
+
+section h2 + h3 {
   text-align: center;
 }
 
@@ -365,13 +368,21 @@ section.intro {
 }
 
 blockquote {
-  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   margin: 0;
+}
+
+blockquote .quote {
+  font-size: 0.875rem;
+  font-style: italic;
 }
 
 blockquote .author {
   font-style: normal;
   font-weight: bold;
+  margin-top: auto;
   text-align: right;
 }
 
