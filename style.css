@@ -24,7 +24,8 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 
 p:last-child,
 ul:last-child,
-ol:last-child {
+ol:last-child,
+li:last-child {
   margin-bottom: 0;
 }
 
@@ -176,7 +177,7 @@ section.intro {
     display: block;
     height: 4px;
     position: absolute;
-    top: 8px;
+    top: 0;
     width: 20px;
   }
 
@@ -199,17 +200,18 @@ section.intro {
   font-style: italic;
 }
 
-.position ul {
+.position-info {
   padding-left: 0;
 }
 
-.position li {
+.position-info > li {
   display: block;
+  margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
 }
 
-.position li:before {
+.position-info > li:before {
   background-color: #fff;
   border: 1px solid #000;
   border-radius: 6px;
@@ -218,11 +220,11 @@ section.intro {
   height: 12px;
   width: 12px;
   position: absolute;
-  top: calc(50% - 6px);
+  top: 3px;
   left: 0;
 }
 
-.position li + li {
+.position-info ul {
   margin-top: 0.5rem;
 }
 
@@ -471,6 +473,15 @@ footer p {
   font-style: italic;
   margin: 0;
   text-align: center;
+}
+
+.bah h3,
+.bah h3:after,
+.bah .timeline,
+.bah .timeline:before,
+.bah .timeline-connect {
+  background-color: #01807e;
+  color: #fff;
 }
 
 .msk h3,

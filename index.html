@@ -14,7 +14,7 @@
 
 <body>
   <section class="intro">
-    <img class="headshot" src="images/jcj2022.jpg" alt="Headshot of John C. Jennings">
+    <img class="headshot" src="images/jcj2023.jpg" alt="Headshot of John C. Jennings">
 
     <h1>John C. Jennings</h1>
 
@@ -113,12 +113,33 @@
     <h2>Professional Experience &mdash; Last 10 Years</h2>
 
     <div class="positions">
+      <div class="position bah" data-months="8">
+        <h3 class="position-title">Lead Software Developer</h3>
+
+        <p class="position-company">Department of Health &amp; Human Services (HHS), Advanced Research Projects Agency for Health (ARPA-H) <em>via</em> Booz Allen Hamilton <span>2023</span></p>
+
+        <ul class="position-info">
+          <li>Providing end-to-end software development for Ruby-based static web application for ARPA-H, a new agency within HHS, including requirements gathering and testing.</li>
+          <li>Eliminating technical/code debt in legacy platform to facilitate and eventual migration to a more robust system.</li>
+          <li>Planning application deployment activities production, editorial, and development environments.</li>
+          <li>Ensuring web application meets a variety of criteria, including:
+            <ul>
+              <li>Accessibility</li>
+              <li>Responsiveness</li>
+              <li>Consistent and appropriate experience in different browsers</li>
+            </ul>
+          </li>
+          <li>Architecting (in process) new content management system in Drupal to meet client requirements for editing and content creation.</li>
+          <li>Constructing a live design system, based of designers’ work in Figma and the USWDS, to accomplish different client goals: a design environment to approve new/existing components and a repository to contain all live JavaScript, CSS, and web assets to be used in the new Drupal content management system and any anticipated other web projects.</li>
+        </ul>
+      </div>
+
       <div class="position msk" data-months="6">
         <h3 class="position-title">Front-End Web Architect, Manager</h3>
 
         <p class="position-company">Memorial Sloan Kettering Cancer Center <span>2022</span></p>
 
-        <ul>
+        <ul class="position-info">
           <li>Forecasted, analyzed, and proposed impact of nascent technologies on MSK’s digital donation properties.</li>
           <li>Designed, oversaw, and prioritized work to align with Development (donation) department's overarching objectives.</li>
           <li>Supported technical vision by collaborating with five cross-functional direct reports that cover full stack and test.</li>
@@ -131,7 +152,7 @@
 
         <p class="position-company">Johnson &amp; Johnson <span>2017 - 2022</span></p>
 
-        <ul>
+        <ul class="position-info">
           <li>Led five-member development team as TPO to introduce innovative technologies and techniques to other teams.</li>
           <li>Managed group with five in-house design team to implement "true north" designs to family of division websites.</li>
           <li>Served as lead developer for Drupal projects, including individual websites featuring many medical device brands.</li>
@@ -145,7 +166,7 @@
 
         <p class="position-company">Checkers Drive-In Restaurants <span>2015 - 2017</span></p>
 
-        <ul>
+        <ul class="position-info">
           <li>Focused on enhancing usability and accessibility of the websites' content for readability and Section 508 compliance.</li>
           <li>Managed web campaigns with external agencies to adhere to brand standards and match advertising campaigns.</li>
           <li>Coded and maintained five consumer-facing websites inherited from previous agencies.</li>
@@ -158,7 +179,7 @@
 
         <p class="position-company">Travelopia / TUI Group <span>2014 - 2015</span></p>
 
-        <ul>
+        <ul class="position-info">
           <li>Leveraged responsive website design principles, with mobile-first approach to front-end code.</li>
           <li>Developed and maintained custom modules and themes for Drupal, WordPress, and Symfony-based websites.</li>
           <li>Functioned as product manager by meeting with brand owners to gather requirements about projects and suggest feature enhancements.</li>
@@ -172,7 +193,7 @@
 
         <p class="position-company">Health Services Advisory Group (HSAG) <span>2012 - 2014</span></p>
 
-        <ul>
+        <ul class="position-info">
           <li>Maintained four existing websites for content, layout, and feature enhancements.</li>
           <li>Updated several Learning Management Systems (LMS) with new tutorials, quizzes, and presentations.</li>
           <li>Developed custom themes and extensions for WordPress for new and existing websites.</li>
@@ -317,7 +338,7 @@
   </section>
 
 	<footer>
-		<p>Content last updated December 2, 2022</p>
+		<p>Content last updated August 2023</p>
 	</footer>
 
   <script>
@@ -353,13 +374,19 @@
       const timelineHeight = timelinePercentage * positionsHeight;
       timeline.style.height = timelineHeight + 'px';
       timeline.style.top = timelineTop + 'px';
-      timelineTop = timelineTop + timelineHeight;
       // Set timeline connector
-      const positionHeight = positions[i].offsetHeight;
       const timelineConnect = positions[i].getElementsByClassName('timeline-connect')[0];
-      timelineConnect.style.top = (positionTop + 8) + 'px';
-      timelineConnect.style.height = (timelineTop - positionTop - (timelineHeight / 2) - 6) + 'px';
-      positionTop = positionHeight + positionTop;
+      const timelineConnectMiddle = timelineTop + (timelineHeight / 2);
+      const timelinePositionTop = positions[i].offsetTop;
+      if (timelineConnectMiddle > timelinePositionTop) {
+        timelineConnect.style.top = timelinePositionTop + 'px';
+        timelineConnect.style.height = (timelineConnectMiddle - timelinePositionTop) + 'px';
+      } else {
+        timelineConnect.style.top = (timelinePositionTop - (timelinePositionTop - timelineConnectMiddle)) + 'px';
+        timelineConnect.style.height = (timelinePositionTop - timelineConnectMiddle) + 'px';
+      }
+      // Advance variables
+      timelineTop = timelineTop + timelineHeight;
     }
   };
 
