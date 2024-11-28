@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="IE=Edge, chrome=1">
 
-	<title>The New R&eacute;sum&eacute; of John C. Jennings</title>
+	<title>The R&eacute;sum&eacute; of John C. Jennings</title>
 
 	<link rel="stylesheet" media="all" href="style.css">
 	<link rel="stylesheet" media="print" href="print.css">
@@ -14,26 +14,26 @@
 
 <body>
   <section class="intro">
-    <img class="headshot" src="images/jcj2023.jpg" alt="Headshot of John C. Jennings">
+    <img class="headshot print-hidden" src="images/jcj2023.jpg" alt="Headshot of John C. Jennings">
 
     <h1>John C. Jennings</h1>
 
-    <p>
-      Email: <a href="mailto:john@johncjennings.com">john@johncjennings.com</a><br>
-      Web: <a target="_blank" href="https://www.linkedin.com/in/jcjconnect">LinkedIn</a> |
-      <a target="_blank" href="https://github.com/ThatRacerGuy">GitHub</a><br>
-      Location: Tampa Bay, FL
+    <p class="intro-contact">
+      <span>Email: <a href="mailto:john@johncjennings.com">john@johncjennings.com</a></span>
+      <span class="print-hidden">Web: <a target="_blank" href="https://www.linkedin.com/in/jcjconnect">LinkedIn</a> |
+      <a target="_blank" href="https://github.com/ThatRacerGuy">GitHub</a></span>
+      <span>Location: Tampa Bay, FL</span>
     </p>
   </section>
 
-  <section>
-    <h2>Front-end Web Application Architect | Developer | Technical Product Owner</h2>
+  <section class="bio">
+    <h2 class="primary-title">Front-end Web Application Architect | Developer | Technical Product Owner</h2>
 
     <p>Dedicated, enthusiastic, and highly adept development professional who creates purposeful and powerful technology products that consistently focus on end user experience. Genuine customer advocate who ensures the best and most viable version of products. Architect and product owner with expertise enhancing and delivering projects to meet organizational goals. Leads with mentorship style as authentic and trusted advisor who helps unlock value for customers, employees, and the business.</p>
   </section>
 
-  <section>
-    <h2>Technical Skills</h2>
+  <section class="technical-skills">
+    <h2 class="secondary-title">Technical Skills</h2>
 
     <div class="boxes boxes-4">
       <div class="box">
@@ -59,21 +59,23 @@
       </div>
 
       <div class="box">
-        <h3>Version Control and Build</h3>
+        <h3>Version Control / Build / Containerization</h3>
 
         <ul>
-          <li>Git (GitHub, Bitbucket, etc.)</li>
+          <li>Git (GitHub, Bitbucket, Azure, etc.)</li>
           <li>Jenkins</li>
+          <li>Docker</li>
         </ul>
       </div>
 
       <div class="box">
-        <h3>Front-End Patterns and Style Guides</h3>
+        <h3>Front-End Patterns</h3>
 
         <ul>
           <li>Storybook</li>
           <li>Sketch and Figma</li>
           <li>Pattern Lab</li>
+          <li>United States Web Design System for Government websites (USWDS)</li>
         </ul>
       </div>
 
@@ -83,6 +85,7 @@
         <ul>
           <li>PHP (Symfony)</li>
           <li>JavaScript (React)</li>
+          <li>JavaScript (Angular)</li>
         </ul>
       </div>
 
@@ -91,37 +94,37 @@
 
         <ul>
           <li>Drupal</li>
-          <li>Salesforce Communities</li>
           <li>WordPress</li>
+          <li>Salesforce Communities</li>
         </ul>
       </div>
 
 			<div class="box">
-        <h3>Hosting</h3>
+        <h3>Hosting / Cloud Platforms</h3>
 
         <ul>
           <li>Acquia</li>
+          <li>AWS</li>
           <li>Pantheon</li>
           <li>Platform.sh</li>
-					<li>AWS</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Professional Experience &mdash; Last 10 Years</h2>
+  <section class="jobs">
+    <h2 class="primary-title">Professional Experience &mdash; Last 12 Years</h2>
 
     <div class="positions">
-      <div class="position bah" data-months="8">
+      <div class="position bah" data-months="23">
         <h3 class="position-title">Lead Software Developer</h3>
 
-        <p class="position-company">Department of Health &amp; Human Services (HHS), Advanced Research Projects Agency for Health (ARPA-H) <em>via</em> Booz Allen Hamilton <span>2023</span></p>
+        <p class="position-company">Booz Allen Hamilton<br><span class="sub-company">U.S. Department of Health and Human Services (HHS), Advanced Research Projects Agency for Health (ARPA-H)</span><br><span class="sub-company">U.S. Department of Energy, Advanced Research Projects Agency for Energy (ARPA-E)</span><span class="date">2023 - 2024</span></p>
 
         <ul class="position-info">
-          <li>Providing end-to-end software development for Ruby-based static web application for ARPA-H, a new agency within HHS, including requirements gathering and testing.</li>
-          <li>Eliminating technical/code debt in legacy platform to facilitate and eventual migration to a more robust system.</li>
-          <li>Planning application deployment activities production, editorial, and development environments.</li>
+          <li>Provided end-to-end software development for Ruby-based static web application for ARPA-H, including requirements gathering and testing</li>
+          <li>Eliminated technical/code debt in legacy platform to facilitate and eventual migration to a more robust system</li>
+          <li>Managed application deployment activities in production, editorial, and development environments</li>
           <li>Ensuring web application meets a variety of criteria, including:
             <ul>
               <li>Accessibility</li>
@@ -129,81 +132,92 @@
               <li>Consistent and appropriate experience in different browsers</li>
             </ul>
           </li>
-          <li>Architecting (in process) new content management system in Drupal to meet client requirements for editing and content creation.</li>
-          <li>Constructing a live design system, based of designers’ work in Figma and the USWDS, to accomplish different client goals: a design environment to approve new/existing components and a repository to contain all live JavaScript, CSS, and web assets to be used in the new Drupal content management system and any anticipated other web projects.</li>
+          <li>Architected new content management systems in Drupal to meet client requirements for editing and content creation using the React library and a component-based design
+            <ul>
+              <li>Reduced typical editorial change wait time by over 90%</li>
+              <li>Significantly reduced code deployments due to allowing more editorial control over content</li>
+            </ul>
+          </li>
+          <li>Constructed multiple design systems in Storybook/React, based on design work in Figma and the USWDS, to accomplish different client goals: a design environment to approve new/existing components and a repository to contain all live JavaScript, CSS, and web assets to be used in the new Drupal content management system and any anticipated other web projects
+            <ul>
+              <li>Reduced bugfix back log by over 80% with implementation of design system</li>
+            </ul>
+          </li>
         </ul>
       </div>
 
-      <div class="position msk" data-months="6">
+      <div class="position msk" data-months="7">
         <h3 class="position-title">Front-End Web Architect, Manager</h3>
 
-        <p class="position-company">Memorial Sloan Kettering Cancer Center <span>2022</span></p>
+        <p class="position-company">Memorial Sloan Kettering Cancer Center <span class="date">2022</span></p>
 
         <ul class="position-info">
-          <li>Forecasted, analyzed, and proposed impact of nascent technologies on MSK’s digital donation properties.</li>
-          <li>Designed, oversaw, and prioritized work to align with Development (donation) department's overarching objectives.</li>
-          <li>Supported technical vision by collaborating with five cross-functional direct reports that cover full stack and test.</li>
-          <li>Implemented Agile methodologies in two distinct website platforms to ensure higher rate of code completion.</li>
+          <li>Created design systems for different branded websites in Storybook, written in React, to collaborate with design stakeholders</li>
+          <li>Forecasted, analyzed, and proposed impact of nascent technologies on MSK’s digital donation properties</li>
+          <li>Designed, oversaw, and prioritized work to align with Development (donation) department's overarching objectives</li>
+          <li>Supported technical vision by collaborating with five cross-functional direct reports that cover full stack and test</li>
+          <li>Created single-page React websites that injected content via GraphQL from different company-used back-ends</li>
+          <li>Implemented Agile methodologies in two distinct website platforms to ensure higher rate of code completion</li>
         </ul>
       </div>
 
       <div class="position jnj" data-months="64">
         <h3 class="position-title">Lead Software Developer &amp; Technical Product Owner</h3>
 
-        <p class="position-company">Johnson &amp; Johnson <span>2017 - 2022</span></p>
+        <p class="position-company">Johnson &amp; Johnson <span class="date">2017 - 2022</span></p>
 
         <ul class="position-info">
-          <li>Led five-member development team as TPO to introduce innovative technologies and techniques to other teams.</li>
-          <li>Managed group with five in-house design team to implement "true north" designs to family of division websites.</li>
-          <li>Served as lead developer for Drupal projects, including individual websites featuring many medical device brands.</li>
-          <li>Helped transition from legacy static site to launch next-gen website for single brand, realizing six-figure cost savings.</li>
-          <li>Oversaw implementation of front-end pattern repository to standardize design principles across multiple websites including J&amp;J MedTech and Janssen Science.</li>
+          <li>Led five-member development team as TPO to introduce innovative technologies and techniques to other teams</li>
+          <li>Managed group with five in-house design team to implement "true north" designs to family of division websites</li>
+          <li>Served as lead developer for Drupal projects, including individual websites featuring many medical device brands</li>
+          <li>Helped transition from legacy static site to launch next-gen website for single brand, realizing six-figure cost savings</li>
+          <li>Oversaw implementation of front-end pattern repository to standardize design principles across multiple websites including J&amp;J MedTech and Janssen Science</li>
         </ul>
       </div>
 
       <div class="position chk" data-months="14">
         <h3 class="position-title">Senior Web Application Developer &amp; Product Owner</h3>
 
-        <p class="position-company">Checkers Drive-In Restaurants <span>2015 - 2017</span></p>
+        <p class="position-company">Checkers Drive-In Restaurants <span class="date">2015 - 2017</span></p>
 
         <ul class="position-info">
-          <li>Focused on enhancing usability and accessibility of the websites' content for readability and Section 508 compliance.</li>
-          <li>Managed web campaigns with external agencies to adhere to brand standards and match advertising campaigns.</li>
-          <li>Coded and maintained five consumer-facing websites inherited from previous agencies.</li>
-          <li>Utilized PHP framework (Symfony) and WordPress to begin transition of existing websites from legacy code to new website using modern, responsive front-end design.</li>
+          <li>Focused on enhancing usability and accessibility of the websites' content for readability and Section 508 compliance</li>
+          <li>Managed web campaigns with external agencies to adhere to brand standards and match advertising campaigns</li>
+          <li>Coded and maintained five consumer-facing websites inherited from previous agencies</li>
+          <li>Utilized PHP framework (Symfony) and WordPress to begin transition of existing websites from legacy code to new website using modern, responsive front-end design</li>
         </ul>
       </div>
 
       <div class="position tui" data-months="14">
         <h3 class="position-title">Web Application Developer</h3>
 
-        <p class="position-company">Travelopia / TUI Group <span>2014 - 2015</span></p>
+        <p class="position-company">Travelopia / TUI Group <span class="date">2014 - 2015</span></p>
 
         <ul class="position-info">
-          <li>Leveraged responsive website design principles, with mobile-first approach to front-end code.</li>
-          <li>Developed and maintained custom modules and themes for Drupal, WordPress, and Symfony-based websites.</li>
-          <li>Functioned as product manager by meeting with brand owners to gather requirements about projects and suggest feature enhancements.</li>
-          <li>Learned agile methodology and quickly became a leading front-end developer on team.</li>
-          <li>Collaborated with six-member development team to code and maintain websites, reservations and booking systems, and manage server infrastructure for multiple in-house brands.</li>
+          <li>Leveraged responsive website design principles, with mobile-first approach to front-end code</li>
+          <li>Developed and maintained custom modules and themes for Drupal, WordPress, and Symfony-based websites</li>
+          <li>Functioned as product manager by meeting with brand owners to gather requirements about projects and suggest feature enhancements</li>
+          <li>Learned agile methodology and quickly became a leading front-end developer on team</li>
+          <li>Collaborated with six-member development team to code and maintain websites, reservations and booking systems, and manage server infrastructure for multiple in-house brands</li>
         </ul>
       </div>
 
-      <div class="position hsag" data-months="14">
+      <div class="position hsag" data-months="25">
         <h3 class="position-title">Web Developer &amp; Designer</h3>
 
-        <p class="position-company">Health Services Advisory Group (HSAG) <span>2012 - 2014</span></p>
+        <p class="position-company">Health Services Advisory Group (HSAG) <span class="date">2012 - 2014</span></p>
 
         <ul class="position-info">
-          <li>Maintained four existing websites for content, layout, and feature enhancements.</li>
-          <li>Updated several Learning Management Systems (LMS) with new tutorials, quizzes, and presentations.</li>
-          <li>Developed custom themes and extensions for WordPress for new and existing websites.</li>
-          <li>Reviewed analytical data to make user-centric recommendations including home page additions and new links.</li>
+          <li>Maintained four existing websites for content, layout, and feature enhancements</li>
+          <li>Updated several Learning Management Systems (LMS) with new tutorials, quizzes, and presentations</li>
+          <li>Developed custom themes and extensions for WordPress for new and existing websites</li>
+          <li>Reviewed analytical data to make user-centric recommendations including home page additions and new links</li>
         </ul>
       </div>
     </div>
   </section>
 
-	<section>
+	<section class="recommendations print-hidden">
     <h2>Recommendations</h2>
 
 		<div class="boxes boxes-3">
@@ -211,7 +225,7 @@
 				<blockquote>
 	        <p class="quote">John and I worked together on the JJMDC project. John was a well respected dev lead and was often referred for architectural questions and direction. He was a fantastic lead and had a great focus on onboarding new members, accessing strengths and weakness, encouraging member to continue their education and helping team members work in their weaker areas to make the team stronger. During our time working together at J&amp;J John was an excellent networker and we made several trips to NJ to work with our teams and workshop to move our project forward faster. Our time working together was a formative part of my early working experience and I'm very thankful for all of his guidance.</p>
 
-					<p class="author">Aaron Sampson, J&amp;J</p>
+					<p class="author">Aaron Sampson, Johnson &amp; Johnson</p>
 				</blockquote>
 			</div>
 
@@ -219,7 +233,7 @@
 				<blockquote>
 	        <p class="quote">John Jennings worked in two major projects on Drupal and Salesforce development while I was his manager at J&J. His knowledge of both was influential with helping the business understand the limitations of Salesforce and he was able to work towards a successful platform upgrade and build in Salesforce and Drupal. He was able to present innovative design solutions within both platforms.</p>
 
-					<p class="author">Asha Calderon, J&amp;J</p>
+					<p class="author">Asha Calderon, Johnson &amp; Johnson</p>
 				</blockquote>
 			</div>
 
@@ -233,8 +247,8 @@
 		</div>
 	</section>
 
-  <section>
-    <h2>Core Competencies</h2>
+  <section class="competencies">
+    <h2 class="primary-title">Core Competencies</h2>
 
     <ul class="inline-list">
       <li>Agile Methadologies</li>
@@ -248,6 +262,7 @@
       <li>Product Management &amp; Ownership</li>
       <li>Front-End Web Development Architecture</li>
       <li>Project Management</li>
+      <li>Local development environments with Docker</li>
       <li>Team Leadership</li>
       <li>Technical Analysis</li>
       <li>Responsive Web Design</li>
@@ -257,8 +272,8 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Certifications</h2>
+  <section class="certifications">
+    <h2 class="primary-title">Certifications</h2>
 
 		<h3><em>Scrum Alliance</em></h3>
 
@@ -268,8 +283,8 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Education</h2>
+  <section class="education">
+    <h2 class="primary-title">Education</h2>
 
     <div class="boxes boxes-2">
       <div class="box">
@@ -277,7 +292,7 @@
 
         <p>Master of Arts in Education, Instructional Technology</p>
 
-        <ul>
+        <ul class="print-hidden">
           <li>2009 - 2010
           <li>Interned with the Florida Center of Instructional Technology to generate tech-infused educational materials</li>
         </ul>
@@ -288,7 +303,7 @@
 
         <p>Bachelor of Arts, Mathematics Education</p>
 
-        <ul>
+        <ul class="print-hidden">
           <li>2003 - 2007</li>
           <li>Inducted into Pi Mu Epsilon - Mathematics Honors Society</li>
         </ul>
@@ -296,10 +311,19 @@
     </div>
   </section>
 
-	<section>
-    <h2>Portfolio</h2>
+	<section class="portfolio print-hidden">
+    <h2 class="primary-title">Portfolio</h2>
 
     <div class="boxes boxes-4">
+      <div class="box">
+        <h3>U.S. Government</h3>
+
+				<ul>
+					<li><a target="_blank" href="https://arpa-h.gov/">ARPA-H (HHS)</a></li>
+          <li><a target="_blank" href="https://arpa-e.energy.gov/">ARPA-E (DOE) <em>in progress</em></a></li>
+				</ul>
+      </div>
+
 			<div class="box">
         <h3>Memorial Sloan Kettering Cancer Center</h3>
 
@@ -319,26 +343,18 @@
       </div>
 
 			<div class="box">
-        <h3>Checkers Drive-In Restaurants</h3>
+        <h3>Other</h3>
 
 				<ul>
-					<li><a target="_blank" href="https://www.checkers.com">Checkers.com</a></li>
-				</ul>
-      </div>
-
-			<div class="box">
-        <h3>Travelopia / TUI Group</h3>
-
-				<ul>
-					<li><a target="_blank" href="https://www.tcsworldtravel.com/">TCS World Travel</a></li>
-					<li><a target="_blank" href="https://www.studentcity.com">Student City</a></li>
+          <li><a target="_blank" href="https://www.theharriscenter.org/">The Harris Center for Mental Health and IDD</a></li>
+					<li><a target="_blank" href="https://www.checkers.com">Checkers Drive-In Restaurants</a></li>
 				</ul>
       </div>
     </div>
   </section>
 
-	<footer>
-		<p>Content last updated August 2023</p>
+	<footer class="print-hidden">
+		<p>Content last updated November 2024</p>
 	</footer>
 
   <script>
