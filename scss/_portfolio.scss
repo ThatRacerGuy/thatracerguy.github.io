@@ -39,6 +39,10 @@
     width: 90%;
   }
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   ul {
     margin-bottom: 1rem;
 
@@ -79,7 +83,7 @@
   @include desktop {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -87,6 +91,7 @@
   @include desktop {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 25%;
+    flex-basis: 50%;
+    padding-right: 1rem;
   }
 }

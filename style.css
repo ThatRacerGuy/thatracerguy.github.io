@@ -645,6 +645,9 @@ footer p {
     width: 90%;
   }
 }
+.portfolio:last-of-type {
+  margin-bottom: 0;
+}
 .portfolio ul {
   margin-bottom: 1rem;
 }
@@ -681,7 +684,7 @@ footer p {
   .portfolio__details {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -689,7 +692,8 @@ footer p {
   .portfolio__detail {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 25%;
+    flex-basis: 50%;
+    padding-right: 1rem;
   }
 }
 
