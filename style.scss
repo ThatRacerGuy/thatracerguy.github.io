@@ -1,3 +1,5 @@
+@use 'scss/vars' as *;
+
 @use 'scss/base';
 @use 'scss/intro';
 @use 'scss/sections';
@@ -6,7 +8,7 @@
 @use 'scss/positions';
 @use 'scss/footer';
 
-@import 'scss/vars';
+@use 'scss/portfolio';
 
 /* Company-specific colors */
 
