@@ -1,1 +1,1 @@
-# Repository for the resume of John C. Jennings
+# Repository for the résumé of John C. Jennings
