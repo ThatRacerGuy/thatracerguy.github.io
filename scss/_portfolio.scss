@@ -3,6 +3,12 @@
 .portfolio-title {
   margin-top: 1rem;
 
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
   &:before {
     content: '// ';
   }
@@ -19,27 +25,42 @@
   @include desktop {
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
   ul {
     margin-bottom: 1rem;
+
+    ul {
+      margin-bottom: 0;
+    }
   }
 }
 
 .portfolio__image {
   order: 1;
+  text-align: center;
 
   @include desktop {
-    flex-basis: 40%;
+    flex-basis: 35%;
     flex-shrink: 0;
     order: 0;
   }
+}
 
-  img {
-    height: auto;
-    vertical-align: top;
-    width: 100%;
-  }
+.portfolio__logo {
+  margin-bottom: 1.5rem;
+  vertical-align: top;
+  width: 300px;
+}
+
+.portfolio__screen {
+  filter: grayscale(100%);
+  height: auto;
+  vertical-align: top;
+  width: 100%;
 }
 
 .portfolio__body {
@@ -58,6 +79,8 @@
 
 .portfolio__detail {
   @include desktop {
-    width: 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 25%;
   }
 }
