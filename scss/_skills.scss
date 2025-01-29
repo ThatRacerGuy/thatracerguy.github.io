@@ -1,0 +1,36 @@
+.technical-skills {
+  @media print {
+    border: 1px solid #000;
+    padding: 0 0 0.25rem;
+  }
+
+  .box {
+    @media print {
+      display: flex;
+      padding: 0.25rem 0.5rem;
+    }
+  }
+
+  h3, ul, li {
+    @media print {
+      display: inline;
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+
+  h3 {
+    @media print {
+      border-right: 1px solid #000;
+      font-weight: bold;
+      margin-right: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  ul {
+    @media print {
+      padding-left: 0;
+    }
+  }
+}

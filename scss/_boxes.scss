@@ -1,0 +1,72 @@
+@import 'vars';
+
+.boxes {
+  @media screen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.box {
+  @media screen {
+    background-color: #fff;
+    border: 1px solid #000;
+    box-shadow: 3px 3px;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  ul {
+    list-style-type: circle;
+    padding-left: 1rem;
+  }
+  
+  li {
+    margin-bottom: 0.25rem;
+  }
+
+  .boxes-2 & {
+    @include desktop {
+      width: calc(50% - 0.5rem);
+    }
+  }
+
+  .boxes-3 & {
+    @include desktop {
+      width: calc((1/3 * 100%) - (2/3 * 1rem));
+    }
+  }
+  
+  .boxes-4 & {
+    @media screen {
+      width: calc(50% - 0.5rem);
+    }
+  }
+  
+  .boxes-4 & {
+    @include desktop {
+      width: calc(25% - 0.75rem);
+    }
+  }
+
+  .education & {
+    @media print {
+      margin-bottom: 1.25rem;
+    }
+
+    &:last-child {
+      @media print {
+        margin-bottom: 0;
+      }
+    }
+
+    & > * {
+      @media print {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import 'vars';
+
+section {
+  display: block;
+  margin: 0 auto;
+  padding: 2rem 0;
+  position: relative;
+
+  @include desktop {
+    max-width: 1200px;
+  }
+
+  @media print {
+    margin: 2rem 0;
+    padding: 0;
+  }
+
+  &:first-of-type {
+    @media print {
+      margin-top: 0;
+    }
+  }
+  
+  &:last-of-type {
+    @media print {
+      margin-bottom: 0;
+    }
+  }
+  
+  &:nth-child(2n) {
+    @media screen {
+      background-color: #f1f9ff;
+    }
+
+    &:before {
+      @media screen {
+        background-color: #f1f9ff;
+        bottom: 0;
+        content: '';
+        display: block;
+        margin-left: calc(50% - 50vw);
+        position: absolute;
+        top: 0;
+        /* Too wide, but body overflow helps */
+        width: 100vw;
+        z-index: -1;
+      }
+    }
+  }
+
+  h2 {
+    text-align: center;
+
+    & + h3 {
+      text-align: center;
+    }
+  }
+}
+
+.primary-title {
+  @media print {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    font-size: 1.375rem;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.secondary-title {
+  @media print {
+    border-bottom: 1px solid #000;
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem;
+    padding: 0.25rem 0.5rem;
+    text-align: left;
+  }
+}

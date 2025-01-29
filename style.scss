@@ -1,0 +1,67 @@
+@use 'scss/base';
+@use 'scss/intro';
+@use 'scss/sections';
+@use 'scss/boxes';
+@use 'scss/skills';
+@use 'scss/positions';
+@use 'scss/footer';
+
+@import 'scss/vars';
+
+/* Company-specific colors */
+
+@media screen {
+  .bah h3,
+  .bah h3:after,
+  .bah .timeline,
+  .bah .timeline:before,
+  .bah .timeline-connect {
+    background-color: #01807e;
+    color: #fff;
+  }
+
+  .msk h3,
+  .msk h3:after,
+  .msk .timeline,
+  .msk .timeline:before,
+  .msk .timeline-connect {
+    background-color: #064785;
+    color: #fff;
+  }
+
+  .jnj h3,
+  .jnj h3:after,
+  .jnj .timeline,
+  .jnj .timeline:before,
+  .jnj .timeline-connect {
+    background-color: #d51900;
+    color: #fff;
+  }
+
+  .chk h3,
+  .chk h3:after,
+  .chk .timeline,
+  .chk .timeline:before,
+  .chk .timeline-connect {
+    background-color: #333;
+    color: #fff;
+  }
+
+  .tui h3,
+  .tui h3:after,
+  .tui .timeline,
+  .tui .timeline:before,
+  .tui .timeline-connect {
+    background-color: #185274;
+    color: #fff;
+  }
+
+  .hsag h3,
+  .hsag h3:after,
+  .hsag .timeline,
+  .hsag .timeline:before,
+  .hsag .timeline-connect {
+    background-color: #2376c8;
+    color: #fff;
+  }
+}

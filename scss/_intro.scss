@@ -1,0 +1,37 @@
+@import 'vars';
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  @media screen {
+    min-height: calc(140px + 4rem);
+    padding-left: calc(140px + 1.5rem);
+  }
+
+  .headshot {
+    border-radius: 50%;
+    height: auto;
+    margin-left: calc(-140px + -1.5rem);
+    position: absolute;
+    width: 140px;
+    vertical-align: top;
+  }
+
+  p span {
+    display: block;
+
+    @media print {
+      display: inline-block;
+    }
+
+    & + span {
+      @media print {
+        margin-left: 1rem;
+        position: relative;
+      }
+    }
+  }
+}

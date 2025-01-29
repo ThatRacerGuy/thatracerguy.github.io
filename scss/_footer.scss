@@ -1,0 +1,31 @@
+footer {
+  background-color: #222;
+  color: #fff;
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+
+  @media screen and (min-width: 800px) {
+    max-width: 1080px;
+  }
+
+  &:before {
+    background-color: #222;
+    bottom: 0;
+    content: '';
+    display: block;
+    margin-left: calc(50% - 50vw);
+    position: absolute;
+    top: 0;
+    /* Too wide, but body overflow helps */
+    width: 100vw;
+    z-index: -1;
+  }
+
+  p {
+    color: inherit;
+    font-style: italic;
+    margin: 0;
+    text-align: center;
+  }
+}
