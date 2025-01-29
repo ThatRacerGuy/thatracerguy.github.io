@@ -17,14 +17,23 @@
 .portfolio {
   border: 1px solid #000;
   box-shadow: 3px 3px;
-  display: flex;
+  display: grid;
   flex-direction: column;
+  grid-template-areas: 
+      "logo"
+      "body"
+      "screen";
   margin-bottom: 2rem;
   padding: 1.5rem;
+  row-gap: 1.5rem;
 
   @include desktop {
-    flex-direction: row;
-    flex-wrap: nowrap;
+    column-gap: 1.5rem;
+    grid-template-areas: 
+      "logo body"
+      "screen body";
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: auto 1fr;
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -39,34 +48,31 @@
   }
 }
 
-.portfolio__image {
-  order: 1;
+.portfolio__logo {
+  grid-area: logo;
   text-align: center;
 
-  @include desktop {
-    flex-basis: 35%;
-    flex-shrink: 0;
-    order: 0;
+  img {
+    height: auto;
+    vertical-align: top;
+    max-width: 280px;
+    width: 100%;
   }
-}
-
-.portfolio__logo {
-  margin-bottom: 1.5rem;
-  vertical-align: top;
-  width: 300px;
 }
 
 .portfolio__screen {
-  filter: grayscale(100%);
-  height: auto;
-  vertical-align: top;
-  width: 100%;
+  grid-area: screen;
+
+  img {
+    filter: grayscale(100%);
+    height: auto;
+    vertical-align: top;
+    width: 100%;
+  }
 }
 
 .portfolio__body {
-  @include desktop {
-    padding-left: 1.5rem;
-  }
+  grid-area: body;
 }
 
 .portfolio__details {
