@@ -699,6 +699,14 @@ footer p {
 
 /* Company-specific colors */
 @media screen {
+  .ironman h3,
+  .ironman h3:after,
+  .ironman .timeline,
+  .ironman .timeline:before,
+  .ironman .timeline-connect {
+    background-color: #e31837;
+    color: #fff;
+  }
   .bah h3,
   .bah h3:after,
   .bah .timeline,

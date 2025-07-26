@@ -1,0 +1,10 @@
+{
+  "name": "thatracerguy.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "sass style.scss style.css"
+  },
+  "keywords": [],
+  "author": "John Jennings",
+  "homepage": "https://github.com/ThatRacerGuy/thatracerguy.github.io#readme"
+}
